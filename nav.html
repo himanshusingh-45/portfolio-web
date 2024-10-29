@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .logo {
+            font-size: 2em;
+            color: #7d2ae8;
+            cursor: default;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navigation a {
+            font-size: 1.1em;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        .navigation a:hover {
+            color: #7d2ae8;
+        }
+
+        .btn-talk {
+            color: white;
+            text-decoration: none;
+            padding: 8px 35px;
+            background: #7d2ae8;
+            border-radius: 10px;
+            border: 2px solid #7d2ae8;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        .btn-talk:hover {
+            color: #7d2ae8;
+            background: transparent;
+        }
+
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 0 5%;
+            margin-top: 70px;
+            flex-direction: column; /* Align items in a column */
+        }
+
+        .home-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .content {
+            max-width: 50%;
+            text-align: left;
+            margin-right: auto;
+        }
+
+        .content h2 {
+            font-size: 3em;
+        }
+
+        .content h2 span {
+            color: #7d2ae8;
+        }
+
+        .content h4 {
+            font-size: 2em;
+        }
+
+        .content p {
+            padding: 10px 0 40px 0;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .btn-group a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 40px;
+            background: #7d2ae8;
+            border-radius: 10px;
+            border: 2px solid #7d2ae8;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        .btn-group a:hover:nth-child(1) {
+            color: #7d2ae8;
+            background: transparent;
+        }
+
+        .btn-group a:nth-child(2) {
+            color: #7d2ae8;
+            background: transparent;
+        }
+
+        .btn-group a:hover:nth-child(2) {
+            color: white;
+            background: #7d2ae8;
+        }
+
+        .image-section {
+            max-width: 35%;
+            background-color: #282828;
+            padding: 20px;
+            border-radius: 50%;
+            /* Make the section circular */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            /* Make the profile image circular */
+            object-fit: cover;
+            /* Ensures the image covers the container */
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px; /* Add margin for spacing */
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: #7d2ae8;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            border: 1px solid #fff;
+            outline: 2px solid #7d2ae8;
+            transition: .3s;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px);
+        }
+
+        .social-icons a i {
+            color: #fff;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .home-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content,
+            .image-section {
+                max-width: 100%;
+            }
+
+            .content {
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .name {
+                white-space: nowrap;
+                font-size: 2.5rem; /* Adjust as needed */
+            }
+
+            .logo {
+                white-space: nowrap; /* Ensures the name is on one line */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2 class="logo"><span>Himanshu</span> Singh</h2>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="skill.html">Skill</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="#" class="btn-talk">Let's Talk</a>
+    </header>
+    <section class="home">
+        <div class="home-container">
+            <div class="content">
+                <h2>Hi, I'm <span>Himanshu Singh</span></h2>
+                <h4 id="job-title">Frontend Developer</h4>
+                <p>I create amazing websites that help you achieve your goals.</p>
+                <div class="btn-group">
+                    <a href='projects.html'>My Work</a>
+                    <a href="https://drive.google.com/file/d/1r_XKoK3QbEaGJPma3sD-1SLIecF9Y110/view?usp=sharing">Download
+                        CV</a>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="WhatsApp Image 2024-10-22 at 7.28.05 PM.jpeg" alt="Himanshu Singh" class="profile-image">
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/himanshu-singh-20844724a" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://himanshusingh-45.github.io" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </section>
+    <script>
+        const jobTitles = ["Frontend Developer", "Web Designer", "UI/UX Designer", "JavaScript Enthusiast"];
+        let index = 0;
+        function changeJobTitle() {
+            document.getElementById('job-title').textContent = jobTitles[index];
+            index = (index + 1) % jobTitles.length;
+        }
+        setInterval(changeJobTitle, 2000);
+    </script>
+</body>
+
+</html>
